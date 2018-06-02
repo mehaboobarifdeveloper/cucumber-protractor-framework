@@ -21,5 +21,14 @@ exports.config = {
             automaticallyGenerateReport: true,
             removeExistingJsonReportFile: true 
         }
-    }]      
+    }],
+    capabilities: {
+        browserName: 'chrome',
+      
+        chromeOptions: {
+           args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+         }
+      }       
 }
+
+//Jenkins setup: https://stackoverflow.com/questions/43231422/jenkins-node-js-github-integration-fails-on-windows-10-during-build?rq=1
